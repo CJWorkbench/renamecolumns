@@ -1,6 +1,15 @@
 import itertools
 import json
 from typing import Dict, List
+from cjwmodule import i18n
+
+
+class UserVisibleError(Exception):
+    """An error that has an `i18n.I18nMessage` as its first argument"""
+
+    @property
+    def i18n_message(self):
+        return self.args[0]
 
 
 def _uniquify(colnames: List[str]):
@@ -80,9 +89,13 @@ def _parse_custom_list(custom_list: str, table_columns: List[str]):
     try:
         renames = {table_columns[i]: s for i, s in enumerate(rename_list) if s}
     except IndexError:
-        raise ValueError(
-            f"You supplied {len(rename_list)} column names, "
-            f"but the table has {len(table_columns)} columns."
+        raise UserVisibleError(
+            i18n.trans(
+                "badParam.custom_list.wrongNumberOfNames",
+                "You supplied {n_names, plural, other {# column names} one {# column name}}, "
+                "but the table has {n_columns, plural, other {# columns} one {# column}}.",
+                {"n_names": len(rename_list), "n_columns": len(table_columns)},
+            )
         )
 
     # Use _parse_renames() logic to consider missing columns and uniquify
@@ -106,8 +119,8 @@ def render(table, params, *, input_columns):
     if params["custom_list"]:
         try:
             renames = _parse_custom_list(params["list_string"], columns)
-        except ValueError as err:
-            return str(err)
+        except UserVisibleError as err:
+            return err.i18n_message
     else:
         renames = _parse_renames(params["renames"], columns)
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-18 10:38+0000\n"
+"POT-Creation-Date: 2020-02-18 10:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -29,5 +29,9 @@ msgid "_spec.parameters.custom_list.name"
 msgstr ""
 
 msgid "_spec.parameters.list_string.placeholder"
+msgstr ""
+
+#: renamecolumns.py:97
+msgid "badParam.custom_list.wrongNumberOfNames"
 msgstr ""
 
