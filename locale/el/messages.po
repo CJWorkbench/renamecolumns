@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-18 10:44+0000\n"
+"POT-Creation-Date: 2020-02-18 16:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -20,16 +20,18 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 msgid "_spec.name"
-msgstr ""
+msgstr "Μετονομασία στηλών"
 
 msgid "_spec.description"
-msgstr ""
+msgstr "Μετονομασία στηλών και καταγραφή όλων των αλλαγών"
 
 msgid "_spec.parameters.custom_list.name"
-msgstr ""
+msgstr "Επικολλήστε τη λίστα με τα νέα ονόματα"
 
 msgid "_spec.parameters.list_string.placeholder"
 msgstr ""
+"Επικολλήστε τις τιμές των ονομάτων στηλών (διαχωρισμένες με κόμμα ή "
+"αλλαγή γραμμής)"
 
 #: renamecolumns.py:97
 msgid "badParam.custom_list.wrongNumberOfNames"
