@@ -35,5 +35,5 @@ msgstr ""
 
 #: renamecolumns.py:97
 msgid "badParam.custom_list.wrongNumberOfNames"
-msgstr ""
+msgstr "Έχετε δώσει {n_names, plural, other {# ονομάτα στηλών} one {# όνομα στήλης}}, αλλά ο πίνακας έχει {n_columns, plural, other {# στήλες} one {# στήλη}}."
 
